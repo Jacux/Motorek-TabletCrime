@@ -30,23 +30,6 @@ xPlayer - Należy dodać funkcję:
 
 
 
-
-## Stashes
-
-- Server-side security prevents arbitrary access to any stash.
-- Support personal stashes, able to be opened with different identifiers.
-- Job-restricted stashes as well as a police evidence locker.
-- Server exports allow for registration of stashes from any resource (see [here](https://github.com/overextended/ox_inventory_examples/blob/main/server.lua)).
-- Access small stashes via containers, such as paperbags, from using an item.
-- Vehicle gloveboxes and trunks, for both owned and unowned.
-
-## Temporary stashes
-
-- Dumpsters, drops, and non-player vehicles.
-- Loot tables allow users to find random items in dumpsters and unowned vehicles.
-
-<br><div><h4 align='center'><a href='https://discord.gg/hmcmv3P7YW'>Discord Server</a></h4></div><br>
-
 <table><tr><td><h3 align='center'>Legal Notices</h2></tr></td>
 <tr><td>
 Ox Inventory
