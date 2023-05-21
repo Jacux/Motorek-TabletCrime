@@ -16,12 +16,16 @@ Należy wgrać plik ```baza.sql```
 
 ## ESX
 
-#Należy przerobić es_extended:
+Należy przerobić es_extended:<br>
 
 xPlayer - Należy dodać funkcję:
+
 `setOrg(job, grade)`
+
 -Należy dodać wartośći:
+
 `xPlayer.org.name` = ID grupy
+
 `xPlayer.org.grade` = Stopień w grupie
 
 
