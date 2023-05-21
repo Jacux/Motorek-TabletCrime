@@ -8,24 +8,26 @@ Skrypt został stworzony pod framework: **[ESX Legacy](https://github.com/esx-fr
 Skrypt jest konfigurowalny. Należy użyć pliku
 ```Config.lua```
 
-# Features
+# Setup
 
-### Shops
+## SQL
 
-- Creates different shops for 24/7, Ammunation, Liquor Stores, Vending Machines, etc.
-- Job restricted shops, such as a Police Armoury.
-- Items can be restricted to specific job grades and licenses.
-- Define the price for each item, and even allow different currency (black money, poker chips, etc).
+Należy wgrać plik ```baza.sql```
 
-### Items
+## ESX
 
-- Generic item data shared between objects.
-- Specific data stored per-slot, with metadata to hold custom information.
-- Weapons, attachments, and durability.
-- Flexible item use allows for progress bars, server callbacks, and cancellation with simple functions and exports.
-- Support for items registered with ESX.
+#Należy przerobić es_extended:
 
-### Stashes
+xPlayer - Należy dodać funkcję:
+`setOrg(job, grade)`
+-Należy dodać wartośći:
+`xPlayer.org.name` = ID grupy
+`xPlayer.org.grade` = Stopień w grupie
+
+
+
+
+## Stashes
 
 - Server-side security prevents arbitrary access to any stash.
 - Support personal stashes, able to be opened with different identifiers.
@@ -34,7 +36,7 @@ Skrypt jest konfigurowalny. Należy użyć pliku
 - Access small stashes via containers, such as paperbags, from using an item.
 - Vehicle gloveboxes and trunks, for both owned and unowned.
 
-### Temporary stashes
+## Temporary stashes
 
 - Dumpsters, drops, and non-player vehicles.
 - Loot tables allow users to find random items in dumpsters and unowned vehicles.
