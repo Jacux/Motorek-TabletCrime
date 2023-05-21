@@ -32,9 +32,10 @@ xPlayer - Należy dodać funkcję:
 
 <table><tr><td><h3 align='center'>Legal Notices</h2></tr></td>
 <tr><td>
-Ox Inventory
+  
+Motorek-TabletCrime
 
-Copyright © 2022 [Linden](https://github.com/thelindat), [Dunak](https://github.com/dunak-debug), [Luke](https://github.com/LukeWasTakenn)
+Copyright © 2022 [Jacux](https://github.com/jacux), [Francuz](https://github.com/FrancuzDEV)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
