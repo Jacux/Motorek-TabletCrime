@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablet Crime</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="container" id="container" style="display: none">
+        <div class="group"><span>Aktywna Grupa</span><br> <b id="grupa">NazwaGrupy</b></div>
+        <div class="nav">
+            <button onclick="Change('home');" class="button"><i class="fas fa-home"></i> Ekran Główny</button><br><br>
+            <button onclick="Change('members');" class="button"><i class="fas fa-users-crown"></i> Członkowie</button><br><br>
+            <button onclick="Change('upgrade');" class="button"><i class="fas fa-level-up"></i> Ulepszenia</button><br><br>
+            <button onclick="Change('shop');" class="button"><i class="fas fa-shopping-cart"></i> Sklep</button><br><br>
+            <button onclick="Change('wallet');" class="button"><i class="fas fa-wallet"></i> Portfel</button><br><br>
+        </div>
+        <section id="home">
+            <div class="topbar"><b>Witaj, Użytkowniku!</b>
+                <div class="meter">
+
+              </div>
+              <br>
+
+              <div class="embed">
+                <a>Numer Portfela Kryptowalut: </a><span id="nrportfelak">17689</span><br>
+                <a>Bitcoin: </a><span class="bitcoin" id="btcstan">12</span><br>
+                <a>Ethereum: </a><span class="ethereum" id="ethstan">9</span><br>
+                <a>Dogecoin: </a><span class="dogecoin" id="dogestan">128</span>
+              </div>
+              <div class="embed">
+                <a>Cennik Kryptowalut:</a><br>
+                <a>Bitcoin: </a><span id="cenabtc" class="srodki">22650</span><br>
+                <a>Ethereum: </a><span id="cenaeth" class="srodki">3500</span><br>
+                <a>Dogecoin: </a><span id="cenadoge" class="srodki">12</span>
+              </div>
+            </div>
+        </section>
+        <section id="members" style="display: none;">
+            <div class="topbar"><b>Członkowie <span id="count">5/5</span> <button onclick="invite();" class="zapros"><i class="fas fa-users"></i> Zaproś Użytkownika</button></b><input type="number" id="tentacles" class="zapros" min="0" > <br><br>
+                <div class="embed2">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Status</th>
+                            <th>Imię i Nazwisko</th>
+                            <th>ISN</th>
+                            <th>Stopień</th>
+                            <th>Zmień stopień</th>
+                        </tr>
+                        
+                    </thead>
+                    <tbody id="testowa">
+                       
+
+
+                                       
+         
+                        
+                    </tbody>
+                </table>
+                </div>  
+                  </div>
+            </section>
+            <section id="upgrade" style="display: none;">
+                <div class="topbar"><b>Ulepszenia</b>
+                    <div class="embedbg">
+                    <div id="levell1" class="embed3">
+                        <h2>Ulepszenie 1. stopnia</h2>
+                        <br>
+                        <h3>Powiększ limit osób w twojej organizacji na <span id="lvl1">8</span></h3>
+                        <br>
+                        <h3>Cena: <span  class="bitcoin">5</span></h3>
+                        <button onclick="upgrade(1)" class="buy">Zakup!</button>
+                    </div>
+                    <div id="levell2" class="embed3">
+                        <h2>Ulepszenie 2. stopnia</h2>
+                        <h4>Wymagane ulepszenie 1. stopnia</h4>
+                        <br>
+                        <h3>Powiększ limit osób w twojej organizacji na <span id="lvl2">16</span></h3>
+                        <br>
+                        <h3>Cena: <span class="bitcoin">5</span></h3>
+                        <button onclick="upgrade(2)" class="buy">Zakup!</button>
+                    </div>
+                    <div id="levell3" class="embed3">
+                        <h2>Ulepszenie 3. stopnia</h2>
+                        <h4>Wymagane ulepszenie 2. stopnia</h4>
+                        <br>
+                        <h3>Powiększ limit osób w twojej organizacji na <span id="lvl3">24</span></h3>
+                        <br>
+                        <h3>Cena: <span class="bitcoin">5</span></h3>
+                        <button onclick="upgrade(3)" class="buy">Zakup!</button>
+                    </div>
+                    <div id="medyk" class="embed3">
+                        <h2>Dostęp do Medyka</h2>
+
+                        <br>
+                        <h3>Wykup prywatnego medyka dla twojej organizacji</h3>
+                        <br>
+                        <h3>Cena: <span class="bitcoin">2</span></h3>
+                        <button onclick="medyk()" class="buy">Zakup!</button>
+                    </div>
+                    </div>  
+                      </div>
+                </section>
+                <section id="wallet" style="display: none;">
+                    <div class="topbar"><b>Portfel</b>
+                        <div class="embed">
+                            <a>Numer Portfela Kryptowalut: </a><span id="nrportfelak2">17689</span><br>
+                            <a>Bitcoin: </a><span class="bitcoin" id="btc2">12</span><br>
+                            <a>Ethereum: </a><span class="ethereum" id="eth2">9</span><br>
+                            <a>Dogecoin: </a><span class="dogecoin" id="doge2">128</span>
+                          </div>
+                          <div class="embedbg" style="display:flex">
+                            <div class="coin">
+                                <a class="ecoin">Bitcoin</a>
+                                <a>Ilość: </a><span class="bitcoin" id="btc1">12</span><br>
+                                <a>Cena: </a><span id="cenabtc1" class="srodki">22650</span><br>
+                                <button onclick="przelej('btc')" class="btnwallet">Przelej!</button>
+                                <button onclick="sprzedaj('btc')" class="btnwallet">Sprzedaj!</button>
+                                <button onclick="buyc('btc')" class="btnwallet">Kup!</button>
+                            </div>
+                            <div class="coin">
+                                <a class="ecoin">Ethereum</a>
+                                <a>Ilość: </a><span class="ethereum" id="eth1">9</span><br>
+                                <a>Cena: </a><span id="cenaeth1" class="srodki">3500</span><br>
+                                <button  onclick="przelej('eth')" class="btnwallet">Przelej!</button>
+                                <button onclick="sprzedaj('eth')" class="btnwallet">Sprzedaj!</button>
+                                <button onclick="buyc('eth')" class="btnwallet">Kup!</button>
+                            </div>
+                            <div class="coin">
+                                <a class="ecoin">DogeCoin</a>
+                                <a>Ilość: </a><span class="dogecoin" id="doge1">128</span><br>
+                                <a>Cena: </a><span id="cenadoge1" class="srodki">12</span><br>
+                                <button onclick="przelej('doge')" class="btnwallet">Przelej!</button>
+                                <button onclick="sprzedaj('doge')" class="btnwallet">Sprzedaj!</button>
+                                <button onclick="buyc('doge')" class="btnwallet">Kup!</button>
+                            </div>
+                          </div>
+                       </div>
+                    </section>
+                    <section id="invite" style="display: none;">
+                        <div class="topbar"><b>Zaproś Użytkownika</b>
+                            <div class="embedbg">
+                                <div class="coin1">es</div>
+                                </div>
+                            </div>
+                        </section>
+                    <section id="shop" style="display: none;">
+                        <div class="topbar"><b>Sklep</b>
+                        <div class="embedbg" id="shops">
+
+                            
+                            </div>
+                            </div>
+                    </section>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
