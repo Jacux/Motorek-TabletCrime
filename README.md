@@ -35,7 +35,7 @@ xPlayer - Należy dodać funkcję:
   
 Motorek-TabletCrime
 
-Copyright © 2022 [Jacux](https://github.com/jacux), [Francuz](https://github.com/FrancuzDEV)
+Copyright © 2023 [Jacux](https://github.com/jacux), [Francuz](https://github.com/FrancuzDEV)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
